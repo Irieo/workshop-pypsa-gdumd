@@ -8,7 +8,7 @@
 title: PyPSA workshop GDU-MD                    # The title of the book. Will be placed in the left navbar.
 author: Iegor Riepin                            # The author of the book
 copyright: "2025"                               # Copyright year to be placed in the footer
-logo: workshop-pypsa-gdumd/green-deal-logo.png  # A path to the book logo
+logo: green-deal-logo.svg  # A path to the book logo
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

@@ -1,11 +1,11 @@
-# Welcome to the PyPSA & PyPSA-Eur workshop
+# Welcome to the workshop!
 *26-28 March 2025, Berlin, Germany*
 
-This webpage contains PyPSA & PyPSA-Eur workshop materials for the colleagues from the Moldovan Ministry of Energy & the Technical University of Moldova. These materials are used as a part of the broader training program titled “Modelarea sistemului energetic al Moldovei folosind PyPSA” on behalf of the BMBF-funded Green Deal Ukraina, a project under Helmholtz-Zentrum Berlin. 
+This webpage contains PyPSA & PyPSA-Eur workshop materials for the colleagues from the Moldovan Ministry of Energy & the Technical University of Moldova. These materials are used as a part of the broader training program titled “Modelarea sistemului energetic al Moldovei folosind PyPSA” on behalf of the BMBF-funded Green Deal Ukraina, a project under Helmholtz-Zentrum Berlin.
 
 ## Google Colab
 
-You can work with the workshop materials without a local Python installation using online service [Google Colab](https://colab.google) which provides an online Python environment. This requires a Google account.
+You can work with the workshop materials without a local Python installation using online service [Google Colab](https://colab.google) which provides an online Python environment. This requires only a Google account.
 
 Open any jupyter notebook and click on the rocket 🚀 in the top right corner. It will launch a Colab workspace in your browser with the jupyter notebook loaded.
 
@@ -36,9 +36,7 @@ From the Anaconda Prompt, you should be able to run `conda`.
 
 Python coupled with a package manager provides a way to make isolated,
 reproducible _environments_ where you have control over all installed packages
-and configurations.
-
-Here is [a great short article](https://medium.com/data-science/conda-essential-concepts-and-tricks-e478ed53b5b) that contains all the essential concepts and tips about using `conda`.
+and configurations. Here is [a great short article](https://medium.com/data-science/conda-essential-concepts-and-tricks-e478ed53b5b) that contains all the essential concepts and tips about using `conda`.
 
 ### Tip: use lightweight `miniconda`
 
