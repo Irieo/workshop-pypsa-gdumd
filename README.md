@@ -7,7 +7,7 @@ These materials are used as a part of the broader training program titled “Mod
 
 ## How to use this material?
 
-See instructions in the [workshop intro page](https://irieo.github.io/workshop-pypsa-transnetbw/intro.html#).
+See instructions in the [workshop intro page](https://irieo.github.io/workshop-pypsa-gdumd/intro.html#).
 
 
 ## Credits
