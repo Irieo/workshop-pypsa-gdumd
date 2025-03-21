@@ -1,0 +1,13 @@
+.ipynb-checkpoints
+*.geojson
+*.nc
+*.tiff
+*.tif
+*.html
+*.png
+*cleared.ipynb
+workshop-pypsa-gdumd/tmp/
+workshop-pypsa-gdumd/_build/
+workshop-pypsa-gdumd/tmp.csv
+workshop-pypsa-gdumd/data
+data/
