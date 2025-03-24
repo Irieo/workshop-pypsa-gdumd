@@ -9,11 +9,11 @@ Below is the content of the config.yaml file:
 
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#run
 run:
-  prefix: MD-workshop
+  prefix: MD
   name:
-    # - benchmark
-    # - no_imports
-    # - no_imports_pricygas
+    - benchmark
+    - no_imports
+    - no_imports_pricygas
     - no_imports_lowemis
   scenarios:
     enable: true
