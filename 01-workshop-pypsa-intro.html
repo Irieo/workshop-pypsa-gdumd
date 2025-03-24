@@ -64,7 +64,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="More pypsa features: more complex dispatch problems" href="02-workshop-pypsa-more-features.html" />
-    <link rel="prev" title="Welcome to the workshop!" href="intro.html" />
+    <link rel="prev" title="Introduction to PyPSA-Eur Slides" href="slides.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -183,6 +183,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="slides.html">Introduction to PyPSA-Eur</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction to <code class="docutils literal notranslate"><span class="pre">pypsa</span></code> and <code class="docutils literal notranslate"><span class="pre">linopy</span></code>: a simple dispatch problem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02-workshop-pypsa-more-features.html">More <code class="docutils literal notranslate"><span class="pre">pypsa</span></code> features: more complex dispatch problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03-workshop-pypsa-sc-expansion.html">Advanced models in <code class="docutils literal notranslate"><span class="pre">pypsa</span></code>: capacity expansion planning with sector coupling</a></li>
@@ -901,13 +902,13 @@ Snapshots: 1
 <h2>Optimisation<a class="headerlink" href="#optimisation" title="Link to this heading">#</a></h2>
 <p>The design principle of PyPSA is that basically each component is associated with a set of variables and constraints that will be added to the optimisation model based on the input data stored for the components.</p>
 <p>For this dispatch problem, PyPSA will solve an optimisation problem that looks like this</p>
-<div class="amsmath math notranslate nohighlight" id="equation-42558d71-7cb3-4ed1-a8cd-f3a70b250b9a">
-<span class="eqno">(1)<a class="headerlink" href="#equation-42558d71-7cb3-4ed1-a8cd-f3a70b250b9a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f7ce1c5a-62be-43c9-af4d-c53af9f25fb1">
+<span class="eqno">(1)<a class="headerlink" href="#equation-f7ce1c5a-62be-43c9-af4d-c53af9f25fb1" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \min_{g_{s,t};} \sum_{t,s} o_{s} g_{s,t}
 \end{equation}\]</div>
 <p>such that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0b9e0d84-c518-424f-8eb5-a3e6546a51e9">
-<span class="eqno">(2)<a class="headerlink" href="#equation-0b9e0d84-c518-424f-8eb5-a3e6546a51e9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c39d80b2-7be4-4827-92d2-4399c6bade6f">
+<span class="eqno">(2)<a class="headerlink" href="#equation-c39d80b2-7be4-4827-92d2-4399c6bade6f" title="Permalink to this equation">#</a></span>\[\begin{align}
 0 &amp; \leq g_{s,t} \leq G_{s}  &amp; \text{generation limits : generator} \\
 D_t &amp;= \sum_s g_{s,t} &amp; \text{market clearing : bus} \\
 \end{align}\]</div>
@@ -953,7 +954,7 @@ Solver message: optimal
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running HiGHS 1.10.0 (git hash: fd86653): Copyright (c) 2025 HiGHS under MIT licence terms
-LP   linopy-problem-w2zo4mzb has 5 rows; 2 cols; 6 nonzeros
+LP   linopy-problem-iaefte9z has 5 rows; 2 cols; 6 nonzeros
 Coefficient ranges:
   Matrix [1e+00, 1e+00]
   Cost   [1e+01, 7e+01]
@@ -964,12 +965,12 @@ Presolving model
 0 rows, 0 cols, 0 nonzeros  0s
 Presolve : Reductions: rows 0(-5); columns 0(-2); elements 0(-6) - Reduced to empty
 Solving the original LP from the solution after postsolve
-Model name          : linopy-problem-w2zo4mzb
+Model name          : linopy-problem-iaefte9z
 Model status        : Optimal
 Objective value     :  2.4000000000e+03
 Relative P-D gap    :  0.0000000000e+00
 HiGHS run time      :          0.00
-Writing the solution to /tmp/linopy-solve-9qxwf5ep.sol
+Writing the solution to /tmp/linopy-solve-t1ye9soc.sol
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ok&#39;, &#39;optimal&#39;)
@@ -1320,16 +1321,16 @@ Value: 2400.0
 <span class="g g-Whitespace">    </span><span class="mi">320</span>     <span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">321</span>     <span class="k">return</span> <span class="n">expressions</span><span class="o">.</span><span class="n">LinearExpression</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/linopy/common.py:254,</span> in <span class="ni">as_dataarray</span><span class="nt">(arr, coords, dims, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">252</span>     <span class="n">arr</span> <span class="o">=</span> <span class="n">numpy_to_dataarray</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="n">coords</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="n">dims</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">253</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="nb">list</span><span class="p">)):</span>
-<span class="ne">--&gt; </span><span class="mi">254</span>     <span class="n">arr</span> <span class="o">=</span> <span class="n">DataArray</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="n">coords</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="n">dims</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">256</span> <span class="k">elif</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">DataArray</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">257</span>     <span class="n">supported_types</span> <span class="o">=</span> <span class="p">[</span>
-<span class="g g-Whitespace">    </span><span class="mi">258</span>         <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">259</span>         <span class="nb">str</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>    <span class="mi">265</span>         <span class="n">DataArray</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">266</span>     <span class="p">]</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/linopy/common.py:258,</span> in <span class="ni">as_dataarray</span><span class="nt">(arr, coords, dims, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">256</span>     <span class="n">arr</span> <span class="o">=</span> <span class="n">numpy_to_dataarray</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="n">coords</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="n">dims</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">257</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="nb">list</span><span class="p">)):</span>
+<span class="ne">--&gt; </span><span class="mi">258</span>     <span class="n">arr</span> <span class="o">=</span> <span class="n">DataArray</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="n">coords</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="n">dims</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">260</span> <span class="k">elif</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">DataArray</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">261</span>     <span class="n">supported_types</span> <span class="o">=</span> <span class="p">[</span>
+<span class="g g-Whitespace">    </span><span class="mi">262</span>         <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">263</span>         <span class="nb">str</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>    <span class="mi">269</span>         <span class="n">DataArray</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">270</span>     <span class="p">]</span>
 
 <span class="nn">File /opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/xarray/core/dataarray.py:487,</span> in <span class="ni">DataArray.__init__</span><span class="nt">(self, data, coords, dims, name, attrs, indexes, fastpath)</span>
 <span class="g g-Whitespace">    </span><span class="mi">485</span> <span class="n">data</span> <span class="o">=</span> <span class="n">_check_data_shape</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">dims</span><span class="p">)</span>
@@ -1465,12 +1466,12 @@ Value: 2400.0
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="slides.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Welcome to the workshop!</p>
+        <p class="prev-next-title">Introduction to PyPSA-Eur Slides</p>
       </div>
     </a>
     <a class="right-next"
