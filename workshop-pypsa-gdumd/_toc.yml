@@ -9,5 +9,9 @@ chapters:
 - file: 01-workshop-pypsa-intro
 - file: 02-workshop-pypsa-more-features
 - file: 03-workshop-pypsa-sc-expansion
+- file: 05-config 
+  title: Exploring MD (config.yaml)
+- file: 05-scenarios
+  title: Exploring MD (scenarios.yaml)
 - file: annex-python
 - file: annex-pandas
