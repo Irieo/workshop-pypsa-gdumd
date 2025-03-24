@@ -902,13 +902,13 @@ Snapshots: 1
 <h2>Optimisation<a class="headerlink" href="#optimisation" title="Link to this heading">#</a></h2>
 <p>The design principle of PyPSA is that basically each component is associated with a set of variables and constraints that will be added to the optimisation model based on the input data stored for the components.</p>
 <p>For this dispatch problem, PyPSA will solve an optimisation problem that looks like this</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f7ce1c5a-62be-43c9-af4d-c53af9f25fb1">
-<span class="eqno">(1)<a class="headerlink" href="#equation-f7ce1c5a-62be-43c9-af4d-c53af9f25fb1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-678b1231-60c1-45b8-aaff-8711a377599e">
+<span class="eqno">(1)<a class="headerlink" href="#equation-678b1231-60c1-45b8-aaff-8711a377599e" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \min_{g_{s,t};} \sum_{t,s} o_{s} g_{s,t}
 \end{equation}\]</div>
 <p>such that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c39d80b2-7be4-4827-92d2-4399c6bade6f">
-<span class="eqno">(2)<a class="headerlink" href="#equation-c39d80b2-7be4-4827-92d2-4399c6bade6f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-47168185-9b6f-4211-8d96-a85dce252a71">
+<span class="eqno">(2)<a class="headerlink" href="#equation-47168185-9b6f-4211-8d96-a85dce252a71" title="Permalink to this equation">#</a></span>\[\begin{align}
 0 &amp; \leq g_{s,t} \leq G_{s}  &amp; \text{generation limits : generator} \\
 D_t &amp;= \sum_s g_{s,t} &amp; \text{market clearing : bus} \\
 \end{align}\]</div>
@@ -954,7 +954,7 @@ Solver message: optimal
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running HiGHS 1.10.0 (git hash: fd86653): Copyright (c) 2025 HiGHS under MIT licence terms
-LP   linopy-problem-iaefte9z has 5 rows; 2 cols; 6 nonzeros
+LP   linopy-problem-mf7d0ari has 5 rows; 2 cols; 6 nonzeros
 Coefficient ranges:
   Matrix [1e+00, 1e+00]
   Cost   [1e+01, 7e+01]
@@ -965,12 +965,12 @@ Presolving model
 0 rows, 0 cols, 0 nonzeros  0s
 Presolve : Reductions: rows 0(-5); columns 0(-2); elements 0(-6) - Reduced to empty
 Solving the original LP from the solution after postsolve
-Model name          : linopy-problem-iaefte9z
+Model name          : linopy-problem-mf7d0ari
 Model status        : Optimal
 Objective value     :  2.4000000000e+03
 Relative P-D gap    :  0.0000000000e+00
 HiGHS run time      :          0.00
-Writing the solution to /tmp/linopy-solve-t1ye9soc.sol
+Writing the solution to /tmp/linopy-solve-j_uxu49_.sol
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ok&#39;, &#39;optimal&#39;)
